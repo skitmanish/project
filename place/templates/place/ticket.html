@@ -1,0 +1,139 @@
+  {% load staticfiles %}
+<html>
+	<head>
+		<title>
+			Tourist Form
+		</title>
+
+	<title>Table</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+	<script src="{% static 'js/jquery.min.js'%}"></script>
+	<script src="{% static 'js/bootstrap.min.js'%}"></script>
+		<!--Favicon : top header icon with title -->
+<i class="fa fa-ticket" aria-hidden="true" sizes="16x16"></i>
+	</head>
+
+			<body>
+				<h1 align="center"><u><font color="purple">TOURIST&nbsp TICKET</font color></u></h1>
+				<div class="container-fluid table-responsive">
+				<table class="table table-bordered table-hover table-striped">
+					<tr>
+						<th>Name</th>
+						<th>Age</th>
+						<th>Gender</th>
+						<th>Country</th>
+						<th>Ticket Cost</th>
+                    {% for tic in tickets.all %}
+					<tr>
+						<td class="success">{{tic.fname}} {{tic.lname}}</td>
+						<td>{{tic.age}}</td>
+						<td>{{tic.gender}}</td>
+						<th>{{tic.country}}</th>
+						<td>{{tic.price}}</td>
+					</tr>
+					{% endfor %}
+				</table>
+
+					<form method="POST" action="{%url 'tick' %}">
+                        {% csrf_token %}
+
+						<!--table bgcolor="purple" width="50%" align="center"> -->
+						<div class="container-fluid table-responsive">
+				<table class="table table-bordered table-hover table-striped">
+
+
+							<tr>
+								<td><font color="Black">FIRST NAME</font color></td>
+								<td>
+									<input type="text" name="firstName" required/>
+									<font color="">(maz 30 characters a-z and A-Z)</font>
+								</td>
+							</tr>
+							<tr>
+								<td><font color="Black">LAST NAME</font color></td>
+								<td>
+									<input type="text" name="lastName" required/>
+									<font color="Black">(maz 30 characters a-z and A-Z)</font>
+								</td>
+							</tr>
+
+								<td><font color="Black">EMAIL ID</font>
+								</td>
+									<td><input type="Black" name="email"/>
+									</td>
+
+							</tr>
+							<tr>
+								<td><font color="Black">MOBILE NUMBER</font>
+								</td>
+								<td><input type="Black" name"mobile" />
+
+								</td>
+							</tr>
+
+							<tr>
+								<td><font color="Black">AGE</font>
+								</td>
+								<td><font color="Black">	<input type="text" name="age" required/>
+
+								</font>
+								</td>
+							</tr>
+							<tr>
+								<td><font color="Black">GENDER</font>
+								</td>
+								<td><font color="Black">	<input type="radio" value="male" name="gr"/>Male
+											<input type="radio" value="female" name="gr"/>Female
+											<input type="radio" value="other" name="gr"/>Other
+								</font>
+								</td>
+							</tr>
+
+							<tr>
+								<td><font color="Black">CITY</font>
+								</td>
+								<td><input type="text" name="city"/><font color="white">(max 30 characters a-z and A-Z)</font>
+								</td>
+							</tr>
+							<tr>
+								<td><font color="Black">PINCODE</font>
+								</td>
+								<td><font color="Black"><input type="tel" name="pincode"/>(6 digit number)
+								</td>
+
+							</tr>
+
+							<tr>
+								<td><font color="Black">COUNTRY</font>
+								</td>
+								<td><input type="text" value=India name="country">
+								</td>
+							</tr>
+
+
+
+
+							<tr>
+
+
+
+									</td>
+							</tr>
+							<br><br>
+							<!--<tr>
+
+								<td  colspan="2" align="center"><input type="Submit" value="Final Submit"/>
+
+
+								</td>
+							</tr>-->
+						</table>
+                     <input class="btn btn-primary" type="submit"  value="Submit"/>
+                    </form>
+					<button class="btn btn-success btn-lg"><a href="https://payments.billdesk.com/pb/">Final Submit</a></button>
+
+			</body>
+</html>
