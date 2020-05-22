@@ -64,7 +64,7 @@ def detail(request,place_id):
         url='https://en.wikipedia.org/wiki/Amber_Fort'
         de='Amber_Fort'
         de2='Amber Fort'
-        de1='Amber Fort, Amer, Jaipur, Rajasthan'
+        de1='Arya Samaj Road, Gurjar Mohalla, Tara Mahendra Colony, Bharatpur, Rajasthan'
     if place_id==311:
         url='https://en.wikipedia.org/wiki/Jaisalmer_Fort'
         de='Jaisalmer_Fort'
@@ -601,7 +601,7 @@ def detail(request,place_id):
 
 
     url=url+'&t=&z=13&ie=UTF8&iwloc=&output=embed'
-
+    print(url)
 
     for i in range(0,len(items)):
         result=items[i].find('img')
@@ -625,23 +625,9 @@ def detail(request,place_id):
                     id=(id+it)
     print(id)
     guides=Guide.objects.filter(id__in=id)
-    cab='https://book.olacabs.com/?utm_source=book_now_top_right&pickup_name=Current%20Location&lat=27.0319616&lng=75.8882304&drop_lat='
 
 
-    geolocator = Nominatim(user_agent="specify_your_app_name_here")
-    location = geolocator.geocode(de2)
-
-    print((location.latitude, location.longitude))
-    cab=cab+str(location.latitude)+'&drop_lng='
-    cab=cab+str(location.longitude)+'&drop_name='
-    var2=de.split(' ')
-    for i in range(0,len(var2)):
-        if i!=len(var2)-1:
-            cab=cab+var2[i]+'%20'
-        else:
-            cab=cab+var2[i]
-
-    return render(request,'place/detail.html',{'images':fre,'ans':o.text,'title':de,'place_id':place_id,'url':url,'guides':guides,'cab':cab})
+    return render(request,'place/detail.html',{'images':fre,'ans':o.text,'title':de,'place_id':place_id,'url':url,'guides':guides})
 
 def lang(request,lan_id,place_id):
     if lan_id==0:

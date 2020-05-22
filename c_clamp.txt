@@ -1,0 +1,254 @@
+
+https://www.ques10.com/p/39614/c-clamp-design-1/
+
+. A C- clamp is subjected to a clamping force of 4 kN. Maximum distance between jaws are 270 mm. Distance between screw axis and inner edge of frame is 150 mm
+
+1) Design the screw nut and frame with appropriate selection permissive stresses for them.
+
+2) Check screw for the Buckling
+
+enter image description here
+
+? Design of screw
+
+1) Selection of material for screw
+
+As screw is subjected to under clamp force as well as torsion , selecting low carbon steel material for the screw
+
+Taking C-30 (C-15 to C-45)
+
+From PSG 1.9
+
+sy=300 N/mm2
+
+su=550 N/mm2
+2) Selection of FOS
+
+As screw is subjected to compressive as well as torsional shear strees and to account for high shear concentration in threads consider high FOS n=4 based on sy value
+
+3) Permissible stresses of the screw material
+
+sc=syFOS=300/4=75 N/mm2
+
+By maximum shear stress theory t=sy×0.5FOS=0.5×3004=37.5 N
+Take t=37N/mm2
+4) Design
+
+Consider compressive failure of screw
+
+sc = WAc
+Ac=Wsc=4×10375=53.33 mm2
+p4×d2cdc=53.33=8.24 mm
+As screw is above diameter based on compressive stress, but in actual screw is also subjected to torsional shear stress.
+
+Hence to take into account effect of torsional shear stress, consider diameter of screw 30% grater than above value
+
+?dc=1.3×8.24=10.712 mm
+Ac=p4×d2c=p4×10.712=90.13 mm2
+Collar friction torque will cause additional stresses. To account for these stresses core area should increase but it is impossible to compute their additional stresses.
+
+Form PSG 5.71
+
+For normal series we can provide standard s core of core area Ac=227 mm
+
+Nominal diameter d0=22 mm Core diameter dc=17 mm Pitch P=5 mm=d0-dc or directly from PSG
+
+Mean diameter
+
+dm=d0+dc2 dm=19.5 mm
+
+Helix angle is obtained by considering single start screw
+
+tana = pitchp×dm=5p×19.5 a=46.6°
+
+(NOTE: If double start is given, tana = pitch×2p×dm )
+
+From PSG 7.87 Friction angle ? = 6°
+
+As ? > a friction torque acting on the screw T1=p×dm2
+T1=W×dm2tan(? + a)
+T1=4×103×19.52tan(6+1.66)
+T1=7.34×103 N-mm (Torque required to overcome friction)
+
+By torsion equation t=16T1p×d3c=16×7.34×103p×173=7.6N/mm2
+? Max principle stress in the screw
+
+scmax=12[sc+s2c+4t2-------v
+
+where sc is the direct composite stress developed in the screw
+
+sc = WAc=4×103227=17.62 N/mm2
+
+scmax=12[17.62+17.622+4(7.60)2--------------v
+scmax=20.44 N/mm2<sc=75 N/mm2
+Hence the screw is safe in compressive stress If fails select the next stage of standard screw
+
+tmax=12s2c+4t2-------v=1217.622+4(7.60)2--------------v
+tmax11.63 N/mm2<t=37 N/mm2
+Hence screw is safe in shear stress
+
+Let us check out the screw of buckling Assuming the nut as solid ? from PSG 7.87 The ratio Hdm=2
+
+?H=2×dm=2×19.5 H=39 mm
+
+Length of the screw for buckling purpose is L=maximum distance between the jaws+H/2
+
+L=270+39/2 L=289.5 mm
+
+( Note: In some problems, height of the throat of screw press is given instead of maximum distance between the jaws. Both are same)
+
+(In some problem it is given as height of screw press)
+
+Consider screw as column whose end is fixed in the nut and other end is free ? using Johnson's parabolic formula from PSG 6.8
+
+Pc = a×sy[1-sy4np2Ek2]
+
+Where n= end fixing condition =0.25 - From last dia on PSG 6.8
+
+k= least radius of gyration k=4.25mm
+
+E= Young's modulus = 2.1×105 N/mm2
+?Pc=227×300[1-3004×0.25×2.1×p2×105(289.54.25)2] Pc=22.36×103 N>W=4×103 N
+As value of buckling or rippling load is more than applied load (W). There is no chance of buckling of screw hence screw is safe
+
+Design of nut
+
+1) Selection of material for nut
+
+Considering nut material CI which is easy to manufacture and cheap CI is also wear resistance material
+
+Therefore selection of GCI 20 from from PSG 1.4
+
+su=2.0 N/mm2
+
+2) Selection of FOS
+
+As material is brittle and to account for high stress concentration in threads consider high FOS i.e, n= 6 su value
+
+3) Permissible stresses in nut
+
+st=suFOS=200/6=33.33
+
+Consider t=st=33 N/mm2
+As compressive strength of CI is much greater than tensile strain,
+
+Consider, sc=2×st=2×33
+
+sc=66 N/mm2
+
+4) Selection of bearing stress
+
+From PSG 7.87
+
+For steel screw and CI nut combination For missible bearing stress sb=80 Kgf/cm2
+?sbr=800×10-2=8 N/mm2
+
+Let n be no.of threads in engagement
+
+?H=pitch×n n=7.8
+Take n=8
+
+Let us check bearing stress developed in the nut threads
+
+W=p4(d20-d2c)n×sbr
+4×103=p4(222-172)×8×sbr
+sbr=3.26 N/mm2<sbr=8 N/mm2
+hence nut threads are safe
+
+It fails to increase no of threads
+
+Let us check shear stress developed in nut threads W = p×do×t1×t
+4×103=p×22×2.5×8×tnut
+tnut=2.8 N/mm2<tnut=33 N/mm2
+? Nut throats are safe under shear stress
+
+Design of frames
+
+When load is applied on frame outer fibers are under compressive loads and inner fibers are under tensile stress i.e maximum stress is at extreme fiber and middle section is expressing less stress or even no stress at center. That means provision of equal amount of material throughout section P is wastage of material so we should select section having less material at the middle and maximum amount of material at both the ends i.e, I section. Also due to this section weight of the frame will be safe
+
+1. Selection of material for frame
+
+As the shape of the frame i.e I section is complex so considering CI as material for the frame which is cheap and easy to manufacture
+
+selecting GCI 25 from PSG 1.4
+
+s4=258 N/mm2
+
+2) selection of FOS
+
+As material is Brittle and subjected static load select FOS , N=5 based on su
+? st=su/FOS=50 N/mm2
+Considering I section whose overall dimensions are as follows
+
+enter image description here
+
+Total area A=(2×st×t)+(8t×t) A=20t2
+
+MI about Y axis is
+
+IyyIyyZ=[6t×(10t)312]-2[(2.5t)×(8t)312]=500t4-213.33t4=286.67t4=Iyy/ymax=57.33 t3
+sb=MZ=W×(150+5t)57.334t3
+=4×103×(150+5t)57.334t3
+sb=69.766(150+5t)t3
+tmax=s0+sb
+s0: Direct stress
+
+sb: Bending stress
+
+50=WA+69.776(150+5t)t3
+50=4×10320t2+69.776(150+5t)t3
+50=200t2+69.776(150+5t)t3
+50t3=200t+10464.9+348.83t
+?50t3-548.83t-10464.9=0
+t=6.55 mm or t=-3.2 mm
+Take t=6.55 mm
+Take t=7 mm
+Note: Take thickness t>5 mm always even t=1 mm comes, take t>5 mm
+Design of handle
+
+Calculate collar friction torque
+
+Assuming uniform pressure conditions
+
+T2=23µW[R31-R32R21-R22]
+where R1: Outer radius of collar
+
+R2: Inner radius of collar
+
+In general above equation is written as T2=µWRM
+T2: Torque required to overcome collar friction
+
+where RM=23[R31-R32R21-R22]
+Take
+
+RM=25 mm µ=0.25
+?T2=0.25×4×103×25
+T2=25×103N-mm
+?Total torque
+
+T=T1+T2
+=7.34×103+25×103
+?T=32.34×103N-mm
+Let lh: Effective length of handle.
+
+Assuming 300N effort applied at end of handle.
+
+?T=F×lh
+?32.34×103=300×lh
+lh=107.78 mm
+Take lh=110 mm
+Let dh be diameter of handle.
+
+Max. bending moment will be
+
+M = Force x length
+
+=300×110
+=33×103N-mm
+Considering C40 as material of handle & FOS 2
+
+?st=sbending=syFOS=3302=165N/mm2
+?sbending=MZ=33×103p32d3h
+165=33×103p32d3h
+?dh=12.67 mm
+Take dh=14 mm
