@@ -616,15 +616,8 @@ def detail(request,place_id):
         re1=re1.text
         fre=fre+[(re,re1)]
 
-    id=()
-    for i in range(0,10):
-            it=()
-            it=(random.randint(6,10),)
-            if it not in id:
-                if len(id)<3:
-                    id=(id+it)
-    print(id)
-    guides=Guide.objects.filter(id__in=id)
+
+    guides=Guide.objects
 
 
     return render(request,'place/detail.html',{'images':fre,'ans':o.text,'title':de,'place_id':place_id,'url':url,'guides':guides})
