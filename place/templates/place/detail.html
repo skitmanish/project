@@ -1,455 +1,511 @@
+﻿
+ {% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Innovation</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+
+<style >
+    .responsive-iframe {
 
 
-<html lang="en">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  left: 0;
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
 
-  {% load staticfiles %}
-  		<body>
-        <nav class="navbar navbar-dark" style="background-color: #29333e;">
-
-<a class="navbar-brand" href="#"><img src="{% static 'coding freaks.jpg' %} "class='image-fluid'height=90 width=90/></a>
+    </head>
 
 
 
-          <div class="row">
 
-            <div class="col-3">
-                  <li class="nav-item">
-                    <a class="nav-link"  style="font-size:18px" href="#About">About</a>
-                  </li>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #1c2c47;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="#"><img src="{% static 'coding freaks.jpg' %}" width="30%" height="30%"></a>
+            <ul class="navbar-nav mt-2 mt-lg-0 ">
+            <li class="nav-item dropdown px-2">
+                <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Language
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'lang' 0 place_id %}">English</a>
+                    <a class="dropdown-item" href="{% url 'lang' 1 place_id %}">Afrikaans</a>
+                    <a class="dropdown-item"href="{% url 'lang' 2 place_id %}">Albanian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 3 place_id %}">Arabic</a>
+                    <a class="dropdown-item"href="{% url 'lang' 4 place_id %}">Azerbaijani</a>
+                    <a class="dropdown-item"href="{% url 'lang' 5 place_id %}">Basque</a>
+                    <a class="dropdown-item"href="{% url 'lang' 6 place_id %}">Bengali</a>
+                    <a class="dropdown-item"href="{% url 'lang' 7 place_id %}">Belarusian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 8 place_id %}">Bulgarian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 9 place_id %}">Catalan</a>
+                    <a class="dropdown-item"href="{% url 'lang' 10 place_id %}">Chinese Simplified	</a>
+                    <a class="dropdown-item"href="{% url 'lang' 11 place_id %}">Chinese Traditional	</a>
+                    <a class="dropdown-item"href="{% url 'lang' 12 place_id %}">Croatian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 13 place_id %}">Czech</a>
+                    <a class="dropdown-item"href="{% url 'lang' 14 place_id %}">Danish</a>
+                    <a class="dropdown-item"href="{% url 'lang' 15 place_id %}">Dutch</a>
+                    <a class="dropdown-item"href="{% url 'lang' 16 place_id %}">Esperanto</a>
+                    <a class="dropdown-item"href="{% url 'lang' 17 place_id %}">Estonian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 18 place_id %}">Filipino</a>
+                    <a class="dropdown-item"href="{% url 'lang' 19 place_id %}">Finnish</a>
+                    <a class="dropdown-item"href="{% url 'lang' 20 place_id %}">French</a>
+                    <a class="dropdown-item"href="{% url 'lang' 21 place_id %}">Galician</a>
+                    <a class="dropdown-item"href="{% url 'lang' 22 place_id %}">Georgian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 23 place_id %}">German</a>
+                    <a class="dropdown-item"href="{% url 'lang' 24 place_id %}">Greek</a>
+                    <a class="dropdown-item"href="{% url 'lang' 25 place_id %}">Gujarati</a>
+                    <a class="dropdown-item"href="{% url 'lang' 26 place_id %}">Haitian Creole	</a>
+                    <a class="dropdown-item"href="{% url 'lang' 27 place_id %}">Hebrew</a>
+                    <a class="dropdown-item"href="{% url 'lang' 28 place_id %}">Hindi</a>
+                    <a class="dropdown-item"href="{% url 'lang' 29 place_id %}">Hungarian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 30 place_id %}">Icelandic</a>
+                    <a class="dropdown-item"href="{% url 'lang' 31 place_id %}">Indonesian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 32 place_id %}">Irish</a>
+                    <a class="dropdown-item"href="{% url 'lang' 33 place_id %}">Italian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 34 place_id %}">Japanese</a>
+                    <a class="dropdown-item"href="{% url 'lang' 35 place_id %}">Kannada</a>
+                    <a class="dropdown-item"href="{% url 'lang' 36 place_id %}">Korean</a>
+                    <a class="dropdown-item"href="{% url 'lang' 37 place_id %}">Latin</a>
+                    <a class="dropdown-item"href="{% url 'lang' 38 place_id %}">Latvian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 39 place_id %}">Lithuanian	</a>
+                    <a class="dropdown-item"href="{% url 'lang' 40 place_id %}">Macedonian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 41 place_id %}">Malay</a>
+                    <a class="dropdown-item"href="{% url 'lang' 42 place_id %}">Maltese</a>
+                    <a class="dropdown-item"href="{% url 'lang' 43 place_id %}">Norwegian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 44 place_id %}">Persian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 45 place_id %}">Polish</a>
+                    <a class="dropdown-item"href="{% url 'lang' 46 place_id %}">Portuguese	</a>
+                    <a class="dropdown-item"href="{% url 'lang' 47 place_id %}">Romanian	</a>
+                    <a class="dropdown-item"href="{% url 'lang' 48 place_id %}">Russian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 49 place_id %}">Serbian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 50 place_id %}">Slovak</a>
+                    <a class="dropdown-item"href="{% url 'lang' 51 place_id %}">Slovenian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 52 place_id %}">Spanish</a>
+                    <a class="dropdown-item"href="{% url 'lang' 53 place_id %}">Swahili</a>
+                    <a class="dropdown-item"href="{% url 'lang' 54 place_id %}">Swedish</a>
+                    <a class="dropdown-item"href="{% url 'lang' 55 place_id %}">Tamil</a>
+                    <a class="dropdown-item"href="{% url 'lang' 56 place_id %}">Telugu</a>
+                    <a class="dropdown-item"href="{% url 'lang' 57 place_id %}">Thai</a>
+                    <a class="dropdown-item"href="{% url 'lang' 58 place_id %}">Turkish</a>
+                    <a class="dropdown-item"href="{% url 'lang' 59 place_id %}">Ukrainian</a>
+                    <a class="dropdown-item"href="{% url 'lang' 60 place_id %}">Urdu</a>
+                    <a class="dropdown-item"href="{% url 'lang' 61 place_id %}">Vietnamese</a>
+                    <a class="dropdown-item"href="{% url 'lang' 62 place_id %}">Welsh	</a>
+                    <a class="dropdown-item"href="{% url 'lang' 63 place_id %}">Yiddish	</a>
                 </div>
-            <div class="col-2">
-                  <li class="nav-item">
-                    <a class="nav-link" style="font-size:18px;" href="#Galary">Gallery</a>
-                  </li>
-                </div>
-
-
-                  <div class="col-2">
-                        <li class="nav-item">
-                          <a class="nav-link" style="font-size:18px;" href="#Contact">Contact</a>
-                        </li>
-                      </div>
+            </li>
 
 
 
-
-
-                <div class="col-3">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                          Language
-                        </a>
-  						  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'lang' 0 place_id %}">English</a>
-  							<a class="dropdown-item" href="{% url 'lang' 1 place_id %}">Afrikaans</a>
-  							<a class="dropdown-item"href="{% url 'lang' 2 place_id %}">Albanian</a>
-                <a class="dropdown-item"href="{% url 'lang' 3 place_id %}">Arabic</a>
-  							<a class="dropdown-item"href="{% url 'lang' 4 place_id %}">Azerbaijani</a>
-  							<a class="dropdown-item"href="{% url 'lang' 5 place_id %}">Basque</a>
-                <a class="dropdown-item"href="{% url 'lang' 6 place_id %}">Bengali</a>
-                <a class="dropdown-item"href="{% url 'lang' 7 place_id %}">Belarusian</a>
-                <a class="dropdown-item"href="{% url 'lang' 8 place_id %}">Bulgarian</a>
-                <a class="dropdown-item"href="{% url 'lang' 9 place_id %}">Catalan</a>
-  							<a class="dropdown-item"href="{% url 'lang' 10 place_id %}">Chinese Simplified	</a>
-  							<a class="dropdown-item"href="{% url 'lang' 11 place_id %}">Chinese Traditional	</a>
-                <a class="dropdown-item"href="{% url 'lang' 12 place_id %}">Croatian</a>
-  							<a class="dropdown-item"href="{% url 'lang' 13 place_id %}">Czech</a>
-  							<a class="dropdown-item"href="{% url 'lang' 14 place_id %}">Danish</a>
-                <a class="dropdown-item"href="{% url 'lang' 15 place_id %}">Dutch</a>
-                <a class="dropdown-item"href="{% url 'lang' 16 place_id %}">Esperanto</a>
-                <a class="dropdown-item"href="{% url 'lang' 17 place_id %}">Estonian</a>
-                <a class="dropdown-item"href="{% url 'lang' 18 place_id %}">Filipino</a>
-  							<a class="dropdown-item"href="{% url 'lang' 19 place_id %}">Finnish</a>
-  							<a class="dropdown-item"href="{% url 'lang' 20 place_id %}">French</a>
-                <a class="dropdown-item"href="{% url 'lang' 21 place_id %}">Galician</a>
-  							<a class="dropdown-item"href="{% url 'lang' 22 place_id %}">Georgian</a>
-  							<a class="dropdown-item"href="{% url 'lang' 23 place_id %}">German</a>
-                <a class="dropdown-item"href="{% url 'lang' 24 place_id %}">Greek</a>
-                <a class="dropdown-item"href="{% url 'lang' 25 place_id %}">Gujarati</a>
-                <a class="dropdown-item"href="{% url 'lang' 26 place_id %}">Haitian Creole	</a>
-                <a class="dropdown-item"href="{% url 'lang' 27 place_id %}">Hebrew</a>
-                <a class="dropdown-item"href="{% url 'lang' 28 place_id %}">Hindi</a>
-                <a class="dropdown-item"href="{% url 'lang' 29 place_id %}">Hungarian</a>
-                <a class="dropdown-item"href="{% url 'lang' 30 place_id %}">Icelandic</a>
-                <a class="dropdown-item"href="{% url 'lang' 31 place_id %}">Indonesian</a>
-                <a class="dropdown-item"href="{% url 'lang' 32 place_id %}">Irish</a>
-                <a class="dropdown-item"href="{% url 'lang' 33 place_id %}">Italian</a>
-                <a class="dropdown-item"href="{% url 'lang' 34 place_id %}">Japanese</a>
-                <a class="dropdown-item"href="{% url 'lang' 35 place_id %}">Kannada</a>
-                <a class="dropdown-item"href="{% url 'lang' 36 place_id %}">Korean</a>
-                <a class="dropdown-item"href="{% url 'lang' 37 place_id %}">Latin</a>
-                <a class="dropdown-item"href="{% url 'lang' 38 place_id %}">Latvian</a>
-                <a class="dropdown-item"href="{% url 'lang' 39 place_id %}">Lithuanian	</a>
-                <a class="dropdown-item"href="{% url 'lang' 40 place_id %}">Macedonian</a>
-                <a class="dropdown-item"href="{% url 'lang' 41 place_id %}">Malay</a>
-                <a class="dropdown-item"href="{% url 'lang' 42 place_id %}">Maltese</a>
-                <a class="dropdown-item"href="{% url 'lang' 43 place_id %}">Norwegian</a>
-                <a class="dropdown-item"href="{% url 'lang' 44 place_id %}">Persian</a>
-                <a class="dropdown-item"href="{% url 'lang' 45 place_id %}">Polish</a>
-                <a class="dropdown-item"href="{% url 'lang' 46 place_id %}">Portuguese	</a>
-                <a class="dropdown-item"href="{% url 'lang' 47 place_id %}">Romanian	</a>
-                <a class="dropdown-item"href="{% url 'lang' 48 place_id %}">Russian</a>
-                <a class="dropdown-item"href="{% url 'lang' 49 place_id %}">Serbian</a>
-                <a class="dropdown-item"href="{% url 'lang' 50 place_id %}">Slovak</a>
-                <a class="dropdown-item"href="{% url 'lang' 51 place_id %}">Slovenian</a>
-                <a class="dropdown-item"href="{% url 'lang' 52 place_id %}">Spanish</a>
-                <a class="dropdown-item"href="{% url 'lang' 53 place_id %}">Swahili</a>
-                <a class="dropdown-item"href="{% url 'lang' 54 place_id %}">Swedish</a>
-                <a class="dropdown-item"href="{% url 'lang' 55 place_id %}">Tamil</a>
-                <a class="dropdown-item"href="{% url 'lang' 56 place_id %}">Telugu</a>
-                <a class="dropdown-item"href="{% url 'lang' 57 place_id %}">Thai</a>
-                <a class="dropdown-item"href="{% url 'lang' 58 place_id %}">Turkish</a>
-                <a class="dropdown-item"href="{% url 'lang' 59 place_id %}">Ukrainian</a>
-                <a class="dropdown-item"href="{% url 'lang' 60 place_id %}">Urdu</a>
-                <a class="dropdown-item"href="{% url 'lang' 61 place_id %}">Vietnamese</a>
-                <a class="dropdown-item"href="{% url 'lang' 62 place_id %}">Welsh	</a>
-                <a class="dropdown-item"href="{% url 'lang' 63 place_id %}">Yiddish	</a>
-  						  </div>
-                </li>
-  				</div>
-
-          <div class="col-2">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                     Spot
-                  </a>
+                </a>
 
-  					  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-  						<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-
-
-  						<a class="dropdown-item"href="{% url 'detail' 302 %}">Hawa_Mahal</a>
-                        <a class="dropdown-item"href="{% url 'detail' 310 %}">Amber_Fort</a>
-                             <a class="dropdown-item"href="{% url 'detail' 325 %}">Jal_Mahal</a>
-  						<a class="dropdown-item"href="{% url 'detail' 303 %}">Rambagh_Palace</a>
-                        <a class="dropdown-item"href="{% url 'detail' 314 %}">Nahargarh_Fort</a>
-                        <a class="dropdown-item"href="{% url 'detail' 333 %}">City palace Jaipur</a>
-                        <a class="dropdown-item"href="{% url 'detail' 334 %}">Govind Dev Ji jaipur</a>
-                        <a class="dropdown-item"href="{% url 'detail' 335 %}">Albert Hall Museum jaipur</a>
-
-                        <a class="dropdown-item"href="{% url 'detail' 337 %}">Padampura Jaipur</a>
-                        <a class="dropdown-item"href="{% url 'detail' 338 %}">Sanganer jaipur</a>
-                        <a class="dropdown-item"href="{% url 'detail' 339 %}">Raj_Mandir_Cinema,Jaipur</a>
-                        <a class="dropdown-item"href="{% url 'detail' 340 %}">World Trade_Park,Jaipur</a>
-                        <a class="dropdown-item"href="{% url 'detail' 341 %}">Jantar_Mantar,Jaipur</a>
+                <div id="myDropdown3" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
 
 
+                    <a class="dropdown-item"href="{% url 'detail' 302 %}">Hawa_Mahal</a>
+                    <a class="dropdown-item"href="{% url 'detail' 310 %}">Amber_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 325 %}">Jal_Mahal</a>
+                    <a class="dropdown-item"href="{% url 'detail' 303 %}">Rambagh_Palace</a>
+                    <a class="dropdown-item"href="{% url 'detail' 314 %}">Nahargarh_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 333 %}">City palace Jaipur</a>
+                    <a class="dropdown-item"href="{% url 'detail' 334 %}">Govind Dev Ji jaipur</a>
+                    <a class="dropdown-item"href="{% url 'detail' 335 %}">Albert Hall Museum jaipur</a>
 
-
-              <a class="dropdown-item"href="{% url 'detail' 305 %}">Jag_Mandir</a>
-              <a class="dropdown-item"href="{% url 'detail' 306 %}">City_Palace,_Udaipur</a>
-              <a class="dropdown-item"href="{% url 'detail' 307 %}">Chittor_Fort</a>
-              <a class="dropdown-item"href="{% url 'detail' 308 %}">Ranthambore_Fort</a>
-              <a class="dropdown-item"href="{% url 'detail' 309 %}">Gagron_Fort</a>
-
-
-              <a class="dropdown-item"href="{% url 'detail' 311 %}">Jaisalmer_Fort</a>
-              <a class="dropdown-item"href="{% url 'detail' 312 %}">Kumbhalgarh_Fort</a>
-              <a class="dropdown-item"href="{% url 'detail' 313 %}">Mehrangarh_Fort</a>
-
-              <a class="dropdown-item"href="{% url 'detail' 315 %}">Bhatner_fort</a>
-
-              <a class="dropdown-item"href="{% url 'detail' 316 %}">Junagarh_Fort</a>
-              <a class="dropdown-item"href="{% url 'detail' 317 %}">Lohagarh_Fort</a>
-              <a class="dropdown-item"href="{% url 'detail' 318 %}">Taragarh_Fort,_Ajmer</a>
-              <a class="dropdown-item"href="{% url 'detail' 319 %}">Jalore_Fort</a>
-              <a class="dropdown-item"href="{% url 'detail' 320 %}">Nagaur#Tourism</a>
-              <a class="dropdown-item"href="{% url 'detail' 321 %}">Dholpur#Tourism_and_landmarks</a>
-
-              <a class="dropdown-item"href="{% url 'detail' 322 %}">Ajmer_Jain_temple</a>
-              <a class="dropdown-item"href="{% url 'detail' 323 %}">Laxmi_Niwas_Palace</a>
-              <a class="dropdown-item"href="{% url 'detail' 324 %}">Vijaya_Stambha</a>
-
-              <a class="dropdown-item"href="{% url 'detail' 327 %}">Jaswant_Thada</a>
-
-              <a class="dropdown-item"href="{% url 'detail' 328 %}">Dilwara_Temples</a>
-              <a class="dropdown-item"href="{% url 'detail' 329 %}">Pushkar_lake</a>
-              <a class="dropdown-item"href="{% url 'detail' 330 %}">Ranakpur_Jain_Temple</a>
-              <a class="dropdown-item"href="{% url 'detail' 331 %}">Ranthambore_National_Park</a>
-
-
-  						<a class="dropdown-item"href="{% url 'detail' 1 %}">Zoological Garden, Alipore</a>
-
-              <a class="dropdown-item"href="{% url 'detail' 5 %}"> Indira Gandhi Zoological Park</a>
-<a class="dropdown-item"href="{% url 'detail' 6 %}"> National Zoological Park Delhi</a>
-              <a class="dropdown-item"href="{% url 'detail' 12 %}">Ana Sagar Lake</a>
-
-
-              <a class="dropdown-item"href="{% url 'detail' 37 %}">Kumbhalgarh</a>
-              <a class="dropdown-item"href="{% url 'detail' 38 %}">'Mehrangarh</a>
-
-              <a class="dropdown-item"href="{% url 'detail' 40 %}">Vijaygarh Fort</a>
-
-              <a class="dropdown-item"href="{% url 'detail' 44 %}">Bhagirathi River</a>
-              <a class="dropdown-item"href="{% url 'detail' 45 %}">Ganges</a>
-
-
-              <a class="dropdown-item"href="{% url 'detail' 84 %}">Eden Gardens</a>
-
-
-
-              <a class="dropdown-item"href="{% url 'detail' 88 %}">Netaji Indoor Stadium</a>
-
-
-              <a class="dropdown-item"href="{% url 'detail' 201%}">Abujmarh
-              </a>
+                    <a class="dropdown-item"href="{% url 'detail' 337 %}">Padampura Jaipur</a>
+                    <a class="dropdown-item"href="{% url 'detail' 338 %}">Sanganer jaipur</a>
+                    <a class="dropdown-item"href="{% url 'detail' 339 %}">Raj_Mandir_Cinema,Jaipur</a>
+                    <a class="dropdown-item"href="{% url 'detail' 340 %}">World Trade_Park,Jaipur</a>
+                    <a class="dropdown-item"href="{% url 'detail' 341 %}">Jantar_Mantar,Jaipur</a>
 
 
 
 
+                    <a class="dropdown-item"href="{% url 'detail' 305 %}">Jag_Mandir</a>
+                    <a class="dropdown-item"href="{% url 'detail' 306 %}">City_Palace,_Udaipur</a>
+                    <a class="dropdown-item"href="{% url 'detail' 307 %}">Chittor_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 308 %}">Ranthambore_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 309 %}">Gagron_Fort</a>
 
 
-              <a class="dropdown-item"href="{% url 'detail' 221%}">Ajanta Caves
-</a>
-<a class="dropdown-item"href="{% url 'detail' 222%}">Ellora Caves
-</a>
-<a class="dropdown-item"href="{% url 'detail' 223%}">Agra Fort
-</a>
-<a class="dropdown-item"href="{% url 'detail' 224%}">Taj Mahal
-</a>
-<a class="dropdown-item"href="{% url 'detail' 225%}">Sun Temple, Konârak
-</a>
+                    <a class="dropdown-item"href="{% url 'detail' 311 %}">Jaisalmer_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 312 %}">Kumbhalgarh_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 313 %}">Mehrangarh_Fort</a>
 
-<a class="dropdown-item"href="{% url 'detail' 227%}">Kaziranga National Park
-</a>
-<a class="dropdown-item"href="{% url 'detail' 228%}">Manas Wildlife Sanctuary
-</a>
-<a class="dropdown-item"class="dropdown-item"href="{% url 'detail' 229%}">Keoladeo National Park
-</a>
-<a class="dropdown-item"href="{% url 'detail' 230%}">Churches and Convents of Goa
-</a>
-<a class="dropdown-item"href="{% url 'detail' 231%}">Khajuraho Group of Monuments
-</a>
-<a class="dropdown-item"href="{% url 'detail' 232%}">Group of Monuments at Hampi
-</a>
-<a class="dropdown-item"href="{% url 'detail' 233%}">Fatehpur Sikri
-</a>
-<a class="dropdown-item"href="{% url 'detail' 234%}">Group of Monuments at Pattadakal
-</a>
-<a class="dropdown-item"href="{% url 'detail' 235%}">Elephanta Caves
-</a>
-<a class="dropdown-item"href="{% url 'detail' 236%}">Great Living Chola Temples
-</a>
-<a class="dropdown-item"href="{% url 'detail' 237%}">Airavateshwarar Temple, Darasuram, Tamil Nadu, India
-</a>
-<a class="dropdown-item"href="{% url 'detail' 238%}">Brihadeeswarar Temple, Thanjavur, Tamil Nadu, India
-</a>
-<a class="dropdown-item"href="{% url 'detail' 239%}">Sundarbans National Park
-</a>
-<a class="dropdown-item"href="{% url 'detail' 240%}">Nanda Devi and Valley of Flowers National Parks
-</a>
+                    <a class="dropdown-item"href="{% url 'detail' 315 %}">Bhatner_fort</a>
 
-<a class="dropdown-item"href="{% url 'detail' 242%}">Humayun's Tomb, Delhi
-</a>
+                    <a class="dropdown-item"href="{% url 'detail' 316 %}">Junagarh_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 317 %}">Lohagarh_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 318 %}">Taragarh_Fort,_Ajmer</a>
+                    <a class="dropdown-item"href="{% url 'detail' 319 %}">Jalore_Fort</a>
+                    <a class="dropdown-item"href="{% url 'detail' 320 %}">Nagaur#Tourism</a>
+                    <a class="dropdown-item"href="{% url 'detail' 321 %}">Dholpur#Tourism_and_landmarks</a>
+
+                    <a class="dropdown-item"href="{% url 'detail' 322 %}">Ajmer_Jain_temple</a>
+                    <a class="dropdown-item"href="{% url 'detail' 323 %}">Laxmi_Niwas_Palace</a>
+                    <a class="dropdown-item"href="{% url 'detail' 324 %}">Vijaya_Stambha</a>
+
+                    <a class="dropdown-item"href="{% url 'detail' 327 %}">Jaswant_Thada</a>
+
+                    <a class="dropdown-item"href="{% url 'detail' 328 %}">Dilwara_Temples</a>
+                    <a class="dropdown-item"href="{% url 'detail' 329 %}">Pushkar_lake</a>
+                    <a class="dropdown-item"href="{% url 'detail' 330 %}">Ranakpur_Jain_Temple</a>
+                    <a class="dropdown-item"href="{% url 'detail' 331 %}">Ranthambore_National_Park</a>
 
 
+                    <a class="dropdown-item"href="{% url 'detail' 1 %}">Zoological Garden, Alipore</a>
+
+                    <a class="dropdown-item"href="{% url 'detail' 5 %}"> Indira Gandhi Zoological Park</a>
+                    <a class="dropdown-item"href="{% url 'detail' 6 %}"> National Zoological Park Delhi</a>
+                    <a class="dropdown-item"href="{% url 'detail' 12 %}">Ana Sagar Lake</a>
 
 
-<a class="dropdown-item"href="{% url 'detail' 266%}">Rani ki vav (The Queen's Stepwell)
-</a>
+                    <a class="dropdown-item"href="{% url 'detail' 37 %}">Kumbhalgarh</a>
+                    <a class="dropdown-item"href="{% url 'detail' 38 %}">'Mehrangarh</a>
 
-<a class="dropdown-item"href="{% url 'detail' 272%}">The Victorian and Art Deco Ensemble of Mumbai
-</a>
-<a hclass="dropdown-item"ref="{% url 'detail' 273%}">Jaipur
-</a>
+                    <a class="dropdown-item"href="{% url 'detail' 40 %}">Vijaygarh Fort</a>
 
-  					  </div>
-              </li>
-  					</div>
-  					</ul>
-  				</div>
-  			</div>
-  		</nav>
-
-  		<div class="container-fluid" style="padding:0px;margin-top:0px">
-  			<div class="col-12 col-12" style="background:orange;padding:20px">
-          <div class="row">
+                    <a class="dropdown-item"href="{% url 'detail' 44 %}">Bhagirathi River</a>
+                    <a class="dropdown-item"href="{% url 'detail' 45 %}">Ganges</a>
 
 
-  				<div class="col-3" id="about">
-  					<br/><br/>
-  					<img src="{% static 'coding freaks.jpg' %}" class='image-fluid'height=200 width=200/>
-  				</div>
-  				<div class="col-9">
-  					<br/>
-  					<p style="font-family:calibri;color:white;font-size:28px">Hello,Our team name is</p>
-  					<p style="font-family:calibri;color:white;font-size:48px"><b>Coding Freaks</b></p>
-  					<p style="font-family:calibri;color:white;font-size:28px">We all are a 3rd Year Student of Skit college, Jaipur.
-  					We have a good knowledge of basic programming languages such as C, C++, JAVA.<br>
-  					We all have a keen interest to solve the various Problems around us.</p>
-  				</div>
-  			</div>
-  		</div>
-  </div>
-  	 <a name="About"> <br>
+                    <a class="dropdown-item"href="{% url 'detail' 84 %}">Eden Gardens</a>
 
-  			<a name="About">
-  			<h2 align=center ><code>ABOUT</code></h2>
 
-  			<div class="container-fluid" style="padding:0px;margin-top:20px">
-  			<div class="col-12" style="background:green;padding:20px">
+
+                    <a class="dropdown-item"href="{% url 'detail' 88 %}">Netaji Indoor Stadium</a>
+
+
+                    <a class="dropdown-item"href="{% url 'detail' 201%}">Abujmarh
+                    </a>
+
+
+
+
+
+
+                    <a class="dropdown-item"href="{% url 'detail' 221%}">Ajanta Caves
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 222%}">Ellora Caves
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 223%}">Agra Fort
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 224%}">Taj Mahal
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 225%}">Sun Temple, Konârak
+                    </a>
+
+                    <a class="dropdown-item"href="{% url 'detail' 227%}">Kaziranga National Park
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 228%}">Manas Wildlife Sanctuary
+                    </a>
+                    <a class="dropdown-item"class="dropdown-item"href="{% url 'detail' 229%}">Keoladeo National Park
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 230%}">Churches and Convents of Goa
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 231%}">Khajuraho Group of Monuments
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 232%}">Group of Monuments at Hampi
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 233%}">Fatehpur Sikri
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 234%}">Group of Monuments at Pattadakal
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 235%}">Elephanta Caves
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 236%}">Great Living Chola Temples
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 237%}">Airavateshwarar Temple, Darasuram, Tamil Nadu, India
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 238%}">Brihadeeswarar Temple, Thanjavur, Tamil Nadu, India
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 239%}">Sundarbans National Park
+                    </a>
+                    <a class="dropdown-item"href="{% url 'detail' 240%}">Nanda Devi and Valley of Flowers National Parks
+                    </a>
+
+                    <a class="dropdown-item"href="{% url 'detail' 242%}">Humayun's Tomb, Delhi
+                    </a>
+
+
+
+
+                    <a class="dropdown-item"href="{% url 'detail' 266%}">Rani ki vav (The Queen's Stepwell)
+                    </a>
+
+                    <a class="dropdown-item"href="{% url 'detail' 272%}">The Victorian and Art Deco Ensemble of Mumbai
+                    </a>
+                    <a hclass="dropdown-item"ref="{% url 'detail' 273%}">Jaipur
+                    </a>
+
+
+            </li>
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+
+
+                    <li class="nav-item px-2 ">
+                        <a class="nav-link"  style="font-size:18px" href="#About">About</a>
+                    </li>
+
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link" style="font-size:18px;" href="#Galary">Gallery</a>
+                    </li>
+
+
+
+
+                    <li class="nav-item px-2">
+                        <a class="nav-link" style="font-size:18px;" href="#Contact">Contact</a>
+                    </li>
+
+
+
+
+
+
+
+
+
+            </ul>
+        </div>
+
+</nav>
+
+<div class="container-fluid" style="padding:0px;margin-top:0px">
+    <div class="col-12 col-12" style="background:orange;padding:20px">
+        <div class="row">
+
+
+            <div class="col-lg-3" id="about">
+                <br/><br/>
+                <img src="{% static 'coding freaks.jpg' %}" >
+            </div>
+            <div class="col-lg-9">
+                <br/>
+                <p style="font-family:calibri;color:white;font-size:28px">Hello,Our team name is</p>
+                <p style="font-family:calibri;color:white;font-size:48px"><b>Coding Freaks</b></p>
+                <p style="font-family:calibri;color:white;font-size:28px" class="text-justify">We all are a 3rd Year Student of Skit college, Jaipur.
+                    We have a good knowledge of basic programming languages such as C, C++, JAVA.<br>
+                    <br>
+                    We all have a keen interest to solve the various Problems around us.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="About"> <br>
+
+        <a name="About">
+            <h2 align=center ><code>ABOUT</code></h2>
+
+            <div class="container-fluid" style="padding:0px;margin-top:20px">
+                <div class="col-12" style="background:green;padding:20px">
 
                     <div class="row">
                         <br/><br/><br/>
-      					<p style="font-family:calibri;color:white;font-size:25px">Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without luggage, and can be one way or round trip. Travel can also include relatively short stays between successive movements.<br><br>As We Travel from one place to Another Than we face a lot of Problems in communicating with the people native to that place. So,this Problem is solved by our Applicaion which can easily help one person to interact with another person without any diffuculty.</p>
+                        <p style="font-family:calibri;color:white;font-size:25px" class="text-justify">Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without luggage, and can be one way or round trip. Travel can also include relatively short stays between successive movements.<br><br>As We Travel from one place to Another Than we face a lot of Problems in communicating with the people native to that place. So,this Problem is solved by our Applicaion which can easily help one person to interact with another person without any diffuculty.</p>
                     </div>
 
 
 
-  			</div>
-  		</div>
-    <br><br><br> <a name="Galary">
-			<h2 style="text-align:center"><code> Gallery</code></h2><br><br>
+                </div>
+            </div>
+            <br><br><br> <a name="Galary">
+                <h2 style="text-align:center"><code> Gallery</code></h2><br><br>
 
 
 
 
-  <div class="container " style="background:#c7bfe0;padding:20px">
+                <div class="container" style="background:#c7bfe0;padding:20px">
 
 
-    <div class="row">
-
-  {% for image in images %}
-  	<div class="col-3">
-        <img class="" src="{{image.0}}" style="width:210px;height:210px;padding:20px;" onclick="currentSlide( {{ forloop.counter }})" alt="{{image.1}}">
-<h5>{{image.1}}</h5>
-      </div>
-
-
-  {% endfor %}
-
-      </div>
-    </div>
-  </div>
-
-
-  <br><br><br>
-
-
-  			<h2 align=center ><a href="#">{{title}}</a></h2>
-        	<div class="container" style="background:cyan;">
-        <div class="row">
-          <br/><br/><br/>
-          <p style="font-family:calibri;color:blue;font-size:23px">{{ans}}</p>
-        </div>
-        </div>
-  <br><br><br>
-
-    <h2 style="text-align:center"><code> Available Guides</code></h2><br><br>
-  <div class="container">
-
-    {% for guide in guides.all %}
-
-
-  <div class="row">
-    <div class="col-2" onclick="window.location='{% url 'guide' guide.id %}'" style="cursor:pointer">
-  <img src="{{guide.image.url}}" class="img-fluid" style="width:150px;height:150px;border-radius: 50%;">
-    </div>
-    <div class="col-4"  onclick="window.location='{% url 'guide' guide.id %}'" style="cursor:pointer">
-      <h1>{{guide.name}}</h1>
-
-    </div>
-    <div class="col-4" onclick="window.location='{% url 'guide' guide.id %}'" style="cursor:pointer">
-      <h3 style="color:red;" >Fare Per Hour :Rs{{guide.fare}}</h3>
-
-    </div>
-    <div class="col-2">
-
-<span class="heading">User Rating</span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
-<p>4.1 average based on 254 reviews.</p>
-<hr style="border:3px solid #f1f1f1">
-
-    </div>
-  </div>
-<br>
-
-
-<hr/>
-{%endfor%}
-  </div>
-
-  <br>
+                    <!-- <div class="row"> !-->
+                    <div class="row">
 
 
 
 
+                        <div class="card-group">
 
-  <br>
-  <h2 align=center ><code>Ticket Booking</code></h2>
-
-  <div class="container" style="background:#808000;">
-  <div class="row">
-      <div class="col-7">
-          <br/><br/><br/>
-          <p style="font-family:calibri;color:white;font-size:25px">Locking in a queue and wasting your hours of precious time is a very serrious problem. So, our website gives you the feature to buy the ticket from your home only and this saves your precious time easily.<br><br>We have a collaboration with the government of India and want to serve you the best.</p>
-      </div>
-      <div class="col-5" id="about">
-          <br/><br/><br/>
-
-          <img src="{% static '1.png' %}" class='image-fluid'height=300 width=300/ />
-      </div>
- </div>
-
- <div class="row" >
- &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="{% url 'ticket' %}" class="btn btn-success">Book Ticket</a>
-  </div>
-
-<br><br>
-  </div>
-  <br>
-  <br>
-  <br>
- <!-- <a href="{% url 'ticket' %}">Book Ticket</a>-->
- <div class="container">
-        <div class="row">
-            <div class="col-md-3 text-center col-padding animate-box">
-  <h2 align=center ><u><code>MAPS</code></u></h2>
-  <div class="mapouter"><div class="gmap_canvas"><iframe width="410" height="380" style="align-left;" id="gmap_canvas" src="{{url}}" frameborder="0" scrolling="no" marginheight="20" marginwidth="20"></iframe></div><style>.mapouter{position:relative;text-align:right;height:410px;width:380px;}.gmap_canvas {overflow:hidden;background:none!important;height:410px;width:380px;}</style></div>
-</div>
-    </div>
-</div>
+                        {% for image in images %}
+                        <div class="col-lg-3">
+                          <div class="card">
 
 
-<br><br><br><br><hr>
-  <a name="Contact"><br>
+                            <img class="" src="{{image.0}}" class="card-img-top" onclick="currentSlide( {{ forloop.counter }})" alt="{{image.1}}">
+                            <div class="card-body">
+                            <h5>{{image.1}}</h5>
+                              </div>
+                            </div>
+                        </div>
 
-  	<a name="About">
-  			<h2 align=center ><code>CONTACT</code></h2>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+            </div>
 
 
-    <section id="contact" onwheel="scrollf2('contact',event)">
+            <br><br><br>
 
-          	<div id="leftcontact">
-              <h2>Phone:</h2> +91 8619179839<br />+91 8696450089<br /><br /><h2>Email:</h2>manishn9887@gmail.com<br />akshatjainajm@gmail.com<br />
-  <br /><h2>Address:</h2> Nirwana Boys Hostel<br>Skit College <br>Ramnagaria,Jagatpura ,Jaipur (Rajasthan)<br>Pin: 302017
-  <br /><a href="https://www.google.com/maps/place/Swami+Keshvanand+Institute+of+Technology,+Management+and+Gramothan+(SKIT+Jaipur)/@26.8230532,75.8645983,17z/data=!3m1!4b1!4m5!3m4!1s0x396db770070b115f:0x6f306afd08a3e737!8m2!3d26.8230484!4d75.866787" target="_blank">See on Google Maps</a>
-  			</div>
 
-          </section>
-      </div>
-    <br>
-    <br>
+            <h2 align=center ><a href="#">{{title}}</a></h2>
+            <div class="container" style="background:cyan;">
+                <div class="row">
+                    <br/><br/><br/>
+                    <p class="text-justify" style="font-family:calibri;color:blue;font-size:23px">{{ans}}</p>
+                </div>
+            </div>
+            <br><br><br>
 
-      <footer class="text-muted">
-         <div class="container text-center">
-           &copy; Coding Freaks{% now 'Y'%}
-         </div>
-       </footer>
-<br><br>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <h2 style="text-align:center"><code> Available Guides</code></h2><br><br>
+            <div class="container">
 
-  		</body>
-  </html>
+                {% for guide in guides.all %}
+
+
+                <div class="row">
+                    <div class="col-lg-3 col-4" onclick="window.location='{% url 'guide' guide.id %}'" style="cursor:pointer">
+                        <img src="{{guide.image.url}}" class="img-fluid" style="border-radius: 50%;">
+                    </div>
+                    <div class="col-lg-3 col-4"  onclick="window.location='{% url 'guide' guide.id %}'" style="cursor:pointer">
+                        <p style="font-size:5vw;">{{guide.name}}</p>
+
+                    </div>
+                    <div class=" col-lg-3 col-4" onclick="window.location='{% url 'guide' guide.id %}'" style="cursor:pointer">
+                        <h3 style="font-size:2vw;color:red;" >Fare Per Hour :Rs{{guide.fare}}</h3>
+
+                    </div>
+                    <div class="col-lg-3 col-5">
+                        <span class="heading">User Rating</span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <p >4.1 average based on 254 reviews.</p>
+                        <hr style="border:3px solid #f1f1f1">
+
+                    </div>
+                </div>
+                <br>
+
+
+                <hr/>
+                {%endfor%}
+            </div>
+
+            <br>
+
+
+
+
+
+            <br>
+            <h2 align=center ><code>Ticket Booking</code></h2>
+
+            <div class="container" style="background:#808000;">
+                <div class="row">
+                    <div class="col-lg-4" id="about">
+                        <br/><br/><br/>
+
+                        <img class="rounded" src="{% static '1.png' %}" style="display: block;margin-left: auto;margin-right: auto;" height=280 width=280/ />
+                    </div>
+                    <div class="col-lg-8">
+                        <br/>
+                        <p class="text-justify"style="font-family:calibri;color:white;font-size:25px">Locking in a queue and wasting your hours of precious time is a very serrious problem. So, our website gives you the feature to buy the ticket from your home only and this saves your precious time easily.<br><br>We have a collaboration with the government of India and want to serve you the best.</p>
+                    </div>
+
+                </div>
+                <br>
+                <div class="row" >
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="{% url 'ticket' %}" class="btn btn-success">Book Ticket</a>
+                </div>
+
+                <br><br>
+            </div>
+            <br>
+            <br>
+            <br>
+            <!-- <a href="{% url 'ticket' %}">Book Ticket</a>-->
+            <h2 align=center ><u><code>MAPS</code></u></h2>
+            <div class="container" style="height:500px;">
+
+
+
+
+                <iframe  class="responsive-iframe" src="{{url}}">
+                </iframe>
+
+
+
+            </div>
+
+            <div class="container-fluid" >
+
+
+            <br><br><br><br><hr>
+            <a name="Contact"><br>
+
+                <a name="About">
+                    <h2 align=center ><code>CONTACT</code></h2>
+
+
+                    <section id="contact" onwheel="scrollf2('contact',event)">
+
+                        <div id="leftcontact">
+                            <h2>Phone:</h2> +91 8619179839<br />+91 8696450089<br /><br /><h2>Email:</h2>manishn9887@gmail.com<br />akshatjainajm@gmail.com<br />
+                            <br /><h2>Address:</h2> Nirwana Boys Hostel<br>Skit College <br>Ramnagaria,Jagatpura ,Jaipur (Rajasthan)<br>Pin: 302017
+                            <br /><a href="https://www.google.com/maps/place/Swami+Keshvanand+Institute+of+Technology,+Management+and+Gramothan+(SKIT+Jaipur)/@26.8230532,75.8645983,17z/data=!3m1!4b1!4m5!3m4!1s0x396db770070b115f:0x6f306afd08a3e737!8m2!3d26.8230484!4d75.866787" target="_blank">See on Google Maps</a>
+                        </div>
+
+                    </section>
+                </div>
+                <br>
+                <br>
+
+                <footer class="text-muted">
+                    <div class="container text-center">
+                        &copy; Coding Freaks{% now 'Y'%}
+                    </div>
+                </footer>
+                <br><br>
+                <script src="{% static 'js/jquery.js'%}"></script>
+                <script src="{% static 'js/bootstrap.min.js'%}"></script>
+
+                <script>
+                    function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown3");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
+                </script>
+
+            </body>
+            </html>
