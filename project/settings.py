@@ -35,11 +35,14 @@ INSTALLED_APPS = [
     'place.apps.PlaceConfig',
     'ticket.apps.TicketConfig',
     'guide.apps.GuideConfig',
+    'cloudinary_storage',
+      'django.contrib.staticfiles',
+       'cloudinary',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+
 ]
 
 MIDDLEWARE = [
@@ -131,8 +134,12 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
-
-
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'hevhvnaxu',
+    'API_KEY': '278295651121772',
+    'API_SECRET': 'KXcwdVsMutLi4o8D4FNtYOGkiDQ',
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS=[os.path.join(BASE_DIR, 'project/static')]
