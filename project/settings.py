@@ -135,9 +135,9 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'hevhvnaxu',
-    'API_KEY': '278295651121772',
-    'API_SECRET': 'KXcwdVsMutLi4o8D4FNtYOGkiDQ',
+    'CLOUD_NAME': 'hvcxfynqe',
+    'API_KEY': '686362967436961',
+    'API_SECRET': 'lEW2IlknHrJF42dpvwJfinhEJc0',
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATIC_URL = '/static/'
