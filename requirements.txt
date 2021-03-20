@@ -11,7 +11,7 @@ gmplot==1.2.0
 googletrans==2.4.0
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 Js2Py==0.66
 key==0.4
 MarkupSafe==1.1.1
